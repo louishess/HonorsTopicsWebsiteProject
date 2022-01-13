@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script>
+    function myFunction() {
+      document.getElementById("p2").style.color = "red";
+    }
+  </script>
+  <link rel="stylesheet" href="stylesheet.css">
+</head>
+
+<body>
+  <h1> pizzapizza </h1>
+  <button id="1" onclick="document.getElementById('1').style.color = 'red'"> click me </button>
+  #le javascript isnt something i use often
+  wait whats the html comment identifier again?
+  <!-- oh right its this -->
+  <p> <br /> gigalmao </p>
+  <button id="two" class="derp"> lolW </button>
+  <br />
+  <h5> yes yes yes </h5>
+  <table> <i> yes yes yes </i> </table>
+  <iframe width="420" height="315" src="https://www.youtube.com/embed/E9T78bT26sk?autoplay=1&mute=1">
+  </iframe>
+  <br />
+  <button id="redBut" class="simonBut redBut" onclick = 'LightRed()'> </button>
+  <button id="blueBut" class="simonBut blueBut" onclick = 'LightBlue()'> </button> <br />
+  <button id="yellowBut" class="simonBut yellowBut" onclick = 'LightYellow()'> </button>
+  <button id="greenBut" class="simonBut greenBut" onclick = 'LightGreen()'> </button>
+</body>
+
+<script>
+  var derp = "derp";
+  var num = "five";
+
+  function myFunction() {
+    document.getElementById("two").classList.remove('derp');
+    alert('lol');
+  }
+  function LightRed() {
+    document.getElementById('redBut').classList.add('clickedRedBut');
+    checkSimon(1);
+    setTimeout(unlightRed, 1000);
+  }
+
+  function unlightRed() {
+    document.getElementById('redBut').classList.remove('clickedRedBut');
+  }
+
+  function LightBlue() {
+    document.getElementById('blueBut').classList.add('clickedBlueBut');
+    checkSimon(2);
+    setTimeout(unlightBlue, 1000);
+  }
+
+  function unlightBlue() {
+    document.getElementById('blueBut').classList.remove('clickedBlueBut');
+
+  }
+  function LightGreen() {
+    document.getElementById('greenBut').classList.add('clickedGreenBut');
+    checkSimon(4);
+    setTimeout(unlightGreen, 1000);
+  }
+
+  function unlightGreen() {
+    document.getElementById('greenBut').classList.remove('clickedGreenBut');
+  }
+  function LightYellow() {
+    document.getElementById('yellowBut').classList.add('clickedYellowBut');
+    checkSimon(3);
+    setTimeout(unlightYellow, 1000);
+  }
+
+  function unlightYellow() {
+    document.getElementById('yellowBut').classList.remove('clickedYellowBut');
+  }
+
+
+  function sleep(milliseconds) {
+    const date = Date.now();
+    let currentDate = null;
+    do {
+      currentDate = Date.now();
+    } while (currentDate - date < milliseconds);
+  }
+  console.log(derp, num);
+  //document.getElementById("two").addEventListener('click', myFunction);
+  var simonNums = [2, 2, 4, 1];
+  var numOn = 0;
+  function checkSimon(number) {
+    if (number == 1) {
+      if (simonNums[numOn] != 1) {
+        endGame();
+      }
+      else {
+        if (numOn < simonNums.length - 1) {
+          numOn++;
+        }
+        else {
+          simonSays();
+        }
+      }
+    }
+    else if (number == 2) {
+      if (simonNums[numOn] != 2) {
+        endGame();
+      }
+      else {
+        if (numOn < simonNums.length - 1) {
+          numOn++;
+        }
+        else {
+          simonSays();
+        }
+      }
+    }
+    else if (number == 3) {
+      if (simonNums[numOn] != 3) {
+        endGame();
+      }
+      else {
+        if (numOn < simonNums.length - 1) {
+          numOn++;
+        }
+        else {
+          simonSays();
+        }
+      }
+    }
+    else if (number == 4) {
+      if (simonNums[numOn] != 4) {
+        endGame();
+      }
+      else {
+        if (numOn < simonNums.length - 1) {
+          numOn++;
+        }
+        else {
+          simonSays();
+        }
+      }
+    }
+  }
+  function endGame () {
+    alert('You lose!!!!! ');
+  }
+  function simonSays() {
+    numOn = 0;
+    //document.getElementById()
+    var ranNum = Math.ceil(3 * (Math.random())) + 1;
+    simonNums.push(ranNum);
+    lightyLighty(0);
+  }
+  function lightyLighty() {
+    for (var counter = 0; counter < simonNums.length; counter++) {
+      var element = simonNums[counter];
+      
+    }
+  }
+
+
+
+</script>
+
+</html>
